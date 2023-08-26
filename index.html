@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <p>Signup</p>
+        <input type="text" id="fullName" placeholder="Full Name">
+        <input type="text" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="confirmpassword" placeholder="Confirm Password">
+        <a href="profile.html" id="btn" onClick="details()" target="_blank">Sign up</a>
+       
+    </div>
+
+    <Script>
+
+        function details(){
+            var email=document.getElementById('email').value;
+            var pswd=document.getElementById('password').value;                  
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", pswd);                  
+        }
+    </Script>
+</body>
+</html>
+
+
