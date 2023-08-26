@@ -11,7 +11,15 @@
     <script>
         
 // Retrieve                    
-document.getElementById("output").innerHTML += localStorage.getItem("email");
+document.getElementById("output").innerHTML += `
+<div class="main-container">
+<p>Profile</p>
+<p>Full Name: ${localStorage.getItem("name")}</p>
+<p>Email: ${localStorage.getItem("email")}</p>
+<p>Password: ${localStorage.getItem("password")}</p>
+<a href="index.html" id="btn" onClick="details()">Logout</a>
+</div>`
+ 
     </script>
 </body>
 </html>

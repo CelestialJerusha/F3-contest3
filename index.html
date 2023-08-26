@@ -10,10 +10,10 @@
 
     <div class="main-container">
         <p>Signup</p>
-        <input type="text" id="fullName" placeholder="Full Name">
-        <input type="text" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Password">
-        <input type="password" id="confirmpassword" placeholder="Confirm Password">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="text" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirmpassword" placeholder="Confirm Password" required>
         <a href="profile.html" id="btn" onClick="details()" target="_blank">Sign up</a>
        
     </div>
@@ -21,8 +21,10 @@
     <Script>
 
         function details(){
+            var name=document.getElementById('fullName').value;
             var email=document.getElementById('email').value;
-            var pswd=document.getElementById('password').value;                  
+            var pswd=document.getElementById('password').value;
+            localStorage.setItem("name", name);                  
             localStorage.setItem("email", email);
             localStorage.setItem("password", pswd);                  
         }
