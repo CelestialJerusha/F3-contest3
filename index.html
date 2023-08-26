@@ -10,24 +10,42 @@
 
     <div class="main-container">
         <p>Signup</p>
-        <input type="text" id="fullName" placeholder="Full Name" required>
-        <input type="text" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <input type="password" id="confirmpassword" placeholder="Confirm Password" required>
-        <a href="profile.html" id="btn" onClick="details()" target="_blank">Sign up</a>
+        <input class="input" type="text" id="fullName" placeholder="Full Name" required/>
+        <input class="input" type="text" id="email" placeholder="Email" required/>
+        <input class="input" type="password" id="password" placeholder="Password" required/>
+        <input class="input" type="password" id="confirmpassword" placeholder="Confirm Password" required/>
+        <button id="btn" onClick="details()">Sign up</button>
+        
        
     </div>
 
     <Script>
-
-        function details(){
-            var name=document.getElementById('fullName').value;
-            var email=document.getElementById('email').value;
-            var pswd=document.getElementById('password').value;
-            localStorage.setItem("name", name);                  
-            localStorage.setItem("email", email);
-            localStorage.setItem("password", pswd);                  
-        }
+        
+                            function details(){
+                                var name=document.getElementById('fullName').value;
+                                var email=document.getElementById('email').value;
+                                var pswd=document.getElementById('password').value;
+                                var inputText = document.getElementsByClassName("input");
+                                var btn = document.getElementById("btn");
+                                        let count=0;
+                                        for(let i=0;i<inputText.length;i++){
+                                            if(inputText[i].value !== ""){
+                                                count++;
+                                            }
+                                        }
+                                        if(count === inputText.length){
+                                        
+                                        btn.innerHTML = `<a href="profile.html" target="_blank">Sign up</a>`
+                                
+                                    localStorage.setItem("name", name);                  
+                                    localStorage.setItem("email", email);
+                                    localStorage.setItem("password", pswd);
+                            }
+                            
+                            
+                    }
+                                    
+        
     </Script>
 </body>
 </html>

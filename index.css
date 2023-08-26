@@ -33,6 +33,12 @@ input{
     text-decoration: none;
 }
 
+a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
 #output{
     margin-top: 20px;
     color: white;
